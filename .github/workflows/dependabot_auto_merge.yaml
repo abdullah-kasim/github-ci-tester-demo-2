@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     # if the PR is created by dependabot
     if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
-    needs: build
     steps:
       - name: Enable auto-merge for Dependabot PRs
         run: gh pr merge --auto --merge "$PR_URL"

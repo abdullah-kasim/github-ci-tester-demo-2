@@ -19,4 +19,4 @@ jobs:
       - name: Just pass or fail immediately
         run: |
           echo "we're failing!"
-          exit 0
+          exit 1
