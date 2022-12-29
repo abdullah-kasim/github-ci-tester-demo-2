@@ -7,8 +7,10 @@ permissions:
 
 jobs:
   dependabot:
+    name: Automerge!
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    # if the PR is from dependabot
+#    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - name: Dependabot metadata
         id: metadata
