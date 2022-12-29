@@ -11,3 +11,6 @@ updates:
       - dependency-name: "nothing"
     schedule:
       interval: "daily"
+    labels:
+      - "[Status] Needs Review"
+      - "dependencies"
