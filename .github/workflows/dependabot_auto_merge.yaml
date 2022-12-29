@@ -12,6 +12,6 @@ jobs:
     if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
       - name: Run Dependabot Auto Merge action
-        uses: Automattic/vip-actions/dependabot-auto-merge@84f7f34469dbcac64ba97c02763357b4c64074d1
+        uses: Automattic/vip-actions/dependabot-auto-merge@165210bed7876e97a3f7ab82b6f08273ae8012b8
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -9,7 +9,9 @@
   "devDependencies": {
     "commander": "9.4.1",
     "express": "4.18.2",
-    "lodash": "4.17.21"
+    "lodash": "4.17.21",
+    "fs-extra": "11.0.0",
+    "axios": "0.27.2"
   },
   "author": "",
   "license": "ISC"
