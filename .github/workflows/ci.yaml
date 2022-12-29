@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Just pass or fail immediately
+    runs-on: ubuntu-latest
+    steps:
+      - name: Just pass or fail immediately
+        run: |
+          echo "we're failing!"
+          exit 1
