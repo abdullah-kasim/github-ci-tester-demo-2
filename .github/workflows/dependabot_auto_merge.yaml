@@ -1,6 +1,9 @@
 name: Dependabot auto-merge
 on: pull_request
 
+# depend on ci.yaml workflow
+
+
 permissions:
   contents: write
   pull-requests: write
@@ -8,15 +11,13 @@ permissions:
 jobs:
   dependabot:
     name: Automerge!
+    # wait for ci to pass
+    # https://github.community/t/how-to-get-the-status-of-a-specific-check/16241/2
     runs-on: ubuntu-latest
-    # if the PR is from dependabot
-#    if: ${{ github.actor == 'dependabot[bot]' }}
+    # if the PR is created by dependabot
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+    needs: ci
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1.1.1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Enable auto-merge for Dependabot PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
