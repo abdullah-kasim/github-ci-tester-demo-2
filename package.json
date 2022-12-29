@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "commander": "9.4.1",
-    "express": "4.18.2"
+    "express": "4.18.2",
+    "lodash": "4.16.6"
   },
   "author": "",
   "license": "ISC"
