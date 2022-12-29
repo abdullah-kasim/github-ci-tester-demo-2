@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  dependabot:
+  dependabot-auto-merge:
     name: Automerge!
     # wait for ci to pass
     # https://github.community/t/how-to-get-the-status-of-a-specific-check/16241/2

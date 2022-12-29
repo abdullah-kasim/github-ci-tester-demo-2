@@ -1,15 +1,16 @@
 name: Dependabot untag
 on:
-  pull_request:
-    types: [closed]
+  pull_request_target:
+    types:
+      - closed
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  dependabot:
-    name: Dependabot auto-merge
+  dependabot-untag:
+    name: Dependabot untag
     runs-on: ubuntu-latest
     # if the PR was merged and the PR is created by dependabot
     if: ${{ github.event.pull_request.merged == true && github.event.pull_request.user.login == 'dependabot[bot]' }}
