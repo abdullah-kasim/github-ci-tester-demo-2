@@ -14,3 +14,4 @@ updates:
     labels:
       - "[Status] Needs Review"
       - "dependencies"
+    open-pull-requests-limit: 15
