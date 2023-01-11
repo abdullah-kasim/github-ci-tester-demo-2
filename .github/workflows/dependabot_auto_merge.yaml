@@ -1,5 +1,6 @@
 name: Dependabot auto-merge
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * 3' # 00:00 AM UTC
 permissions:
@@ -12,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Dependabot Auto Merge action
-        uses: Automattic/vip-actions/dependabot-auto-merge@5580f2e382d9481640a46d48181618416ed2c96c
+        uses: Automattic/vip-actions/dependabot-auto-merge@a99c7e47c4b4509e3b4ed23513d0ffe99a39d49e
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
