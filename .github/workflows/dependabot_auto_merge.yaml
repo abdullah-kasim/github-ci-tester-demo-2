@@ -1,6 +1,7 @@
 name: Dependabot auto-merge
-on: pull_request_target
-
+on:
+  schedule:
+    - cron: '0 0 * * 3' # 00:00 AM UTC
 permissions:
   contents: write
   pull-requests: write
@@ -9,9 +10,8 @@ jobs:
   dependabot-auto-merge:
     name: Dependabot auto-merge
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
       - name: Run Dependabot Auto Merge action
-        uses: Automattic/vip-actions/dependabot-auto-merge@165210bed7876e97a3f7ab82b6f08273ae8012b8
+        uses: Automattic/vip-actions/dependabot-auto-merge@5580f2e382d9481640a46d48181618416ed2c96c
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
