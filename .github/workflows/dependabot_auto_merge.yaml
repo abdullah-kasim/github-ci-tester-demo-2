@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Dependabot Auto Merge action
-        uses: Automattic/vip-actions/dependabot-auto-merge@a99c7e47c4b4509e3b4ed23513d0ffe99a39d49e
+        uses: Automattic/vip-actions/dependabot-auto-merge@fd5345ba99e79e9974e1205f7c3b74bef80eb8bf
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
