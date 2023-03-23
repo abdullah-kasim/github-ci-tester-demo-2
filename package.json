@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "glob": "8.0.2",
-    "mkdirp": "1.0.4",
+    "mkdirp": "2.1.6",
     "graphql": "15.8.0",
     "gulp": "4.0.0",
     "qrcode": "1.5.1",
